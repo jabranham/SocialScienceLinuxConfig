@@ -66,6 +66,14 @@ your favorite CRAN mirror. You can find the full list of mirrors
               options(repos = r)
     })
 
+## Step 2b: Install R packages
+R can do a lot out of the box, but it's real strength lies in packages
+that extend it. Here's a quick list of some of the packages that I
+find myself using frequently:
+
+    install.packages("lintr", "ggplot2", "dplyr", "zoo",
+                     "rstan", "rjags", "MCMCpack", "rmarkdown",
+                     "knitr", "reshape2", "servr")
 
 # Step 3: Install TeXLive
 This is a bit trickier than R. Ubuntu actually has TeXLive in its
