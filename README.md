@@ -17,7 +17,7 @@ google around to find out how to get them for your operating system.
 
 # Step 0: Install Ubuntu
 This is not meant as a manual to help you install Ubuntu. However,
-You can install Ubuntu on pretty much any computer. I use the 6-month
+you can install Ubuntu on pretty much any computer. I use the 6-month
 rolling releases instead of the LTS. You can get more information
 about how to install Ubuntu from
 [Ubuntu's website](http://www.ubuntu.com/). A quick Google search will
@@ -31,7 +31,8 @@ it really does all of that. You'll also want
 [ESS](http://ess.r-project.org/) (Emacs Speaks Statistics), which
 provides a way for Emacs and R to cooperate. Finally, you'll want git
 for all your version control needs. 
- `sudo apt-get install emacs24 ess git`
+
+    sudo apt-get install emacs24 ess git
 
 ## Step 1a: Configure git
 You'll need to tell git your name and email. Run these two commands in
