@@ -10,7 +10,7 @@ distros. For other Linux systems, you'll probably have access to
 everything I describe here, but may need to change the commands a
 bit.
 
-Most (all?) programs are
+Most (all?) programs included in this list are
 [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software). Thus,
 they are also available on Windows and Mac. Just
 google around to find out how to get them for your operating system. 
