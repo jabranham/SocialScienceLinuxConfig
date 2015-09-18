@@ -75,3 +75,52 @@ connectivity.
 If you're on a Mac, you can install MaCTeX and Windows users probably
 want MiKTeX. 
 
+# Step 4: Configure Emacs
+Emacs is infinitely configure-able. You could spend months (years?)
+getting it *just* right. Feel free to do so. It's probably not worth
+it, though. My advice is just to commit to using emacs, and develop
+your specific configuration as you go. There are definitely a few
+things that you'll want to set up beforehand, though.
+
+I keep my .emacs file in
+a [github repository](https://github.com/jabranham/emacs), so feel
+free to check it out. If you drop the init.el file into ~/.emacs.d/,
+it should work just fine on your setup. It adds the ability to connect
+to [MELPA](https://melpa.org/) to your emacs setup, so you'll need an
+internet connection the first time you use it.
+
+I'm not sure I'd recommend just using my .emacs file, though (or
+anyone else's). Setting up emacs yourself teaches you a bit about how
+the program thinks. So I'll list some packages here that I think are
+particularly invaluable:
+
+* magit - for all your git needs, inside emacs
+* auctex - for writing LaTeX
+* polymode - for .Rnw (knitr + LaTeX) and .Rmd (rmarkdown) files
+* ebib - for .bib file management
+* markdown-mode - for working with markdown files
+* reftex - this comes bundled with emacs in recent versions, but makes
+  working with .bib files a breeze 
+
+Those are absolute must-haves for doing the sort of work we do. If you
+work with languages other than R, LaTeX, and markdown, you'll want to
+make sure you have the proper "major mode" for that language. ESS
+(which you already installed above) makes emacs work with R, so no
+need to do anything there. There are some other packages that just
+make emacs work a little better, and I'll list some here:
+
+* better-defaults - literally better defaults for emacs. Pretty much
+everyone should use this
+* smex - easier way to navigate commands (like `M-x`)
+* There are several "ido" packages - go look them up. They'll make
+your life easier.
+* smartparens - easier parentheses management
+* company - for autocompletion (there's also auto-complete, but I
+prefer company)
+* flyspell - for spell checking on the fly
+* smooth-scrolling - for doing away with emacs' nonsense default
+scrolling
+* flycheck - checks for good style and syntax
+
+There are tons more packages available, but those should get you
+started. 
