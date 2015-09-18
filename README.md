@@ -24,21 +24,29 @@ that it works well on your computer.
 
 # Step 1: Install programs from Ubuntu's repositories
 You'll want Emacs (at least 24) for LaTeX, markdown, R, and git. Yes,
-it really does all of that:
-- [ ] `sudo apt-get install emacs24 ess`
+it really does all of that. You'll also want
+[ESS](http://ess.r-project.org/) (Emacs Speaks Statistics), which
+provides a way for Emacs and R to cooperate. Finally, you'll want git
+for all your version control needs. 
+ `sudo apt-get install emacs24 ess git`
 
-You'll want git for version control:
-- [ ] `sudo apt-get install git`
 
 ## Step 1a: Configure git
-You'll need to tell git your name and email. Instructions for how to
-do so are [here](). 
+You'll need to tell git your name and email. Run these two commands in
+the terminal, replacing the "John Doe" information with your name and
+email:
+
+    git config --global user.name "John Doe"
+    git config --global user.email johndoe@example.com
+
+The global option will tell git to remember those values, so you
+shouldn't have to do this again. 
 
 # Step 2: Install R
 Installing R on an Ubuntu type Linux distribution is easy. You can
 simply follow the steps
 [here](https://cran.r-project.org/bin/linux/ubuntu/README). Be sure to
-read about the secure APT part
+read about the secure APT part. 
 
 ## Step 2a: Configure CRAN mirror
 This step isn't totally necessary, but it may save you some time in
@@ -46,7 +54,8 @@ the future. In your `.Rprofile` file (usually located at ~/), you can
 set the CRAN mirror so that R doesn't ask you. I use RStudio's mirror,
 since it should work fairly quickly anywhere in the world. If you want
 to use a different mirror, replace `"https://cran.rstudio.com/"` with
-your favorite CRAN mirror. You can find the full list of mirrors [here]().
+your favorite CRAN mirror. You can find the full list of mirrors
+[here](https://cran.r-project.org/mirrors.html). 
 
     local({
       r <- getOption("repos")
@@ -64,11 +73,12 @@ download and install.
 
 I really don't recommend doing that, though. You can install what's
 referred to as "vanilla" TeXLive fairly easily. There's a stackoverflow
-answer [here]() that gives step-by-step instructions for how to get
-vanilla TeXLive set up on your system.
+answer [here](http://tex.stackexchange.com/a/95373) that gives
+step-by-step instructions for how to get vanilla TeXLive set up on
+your system.
 
 If you usually have regular access to the internet, I'd recommend
-skipping the ______________________ files. They add a lot to the
+skipping the *doc* and *source*  files. They add a lot to the
 installation and are totally unnecessary if you have internet
 connectivity. 
 
