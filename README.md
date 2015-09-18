@@ -2,7 +2,7 @@
 This file will help you get your Ubuntu-based Linux machine up and
 running to do quantitative social science data work. It was inspirited
 by the similarly-titled
-[SocialScienceMacconfig](https://github.com/jwbowers/SocialScienceMacConfig)
+[SocialScienceMacConfig](https://github.com/jwbowers/SocialScienceMacConfig)
 put together by Jake Bowers and Jeff Gill.
 
 Steps should be similar or identical in other Debian-based Linux
@@ -10,10 +10,13 @@ distros. For other Linux systems, you'll probably have access to
 everything I describe here, but may need to change the commands a
 bit.
 
-Most (all?) programs here are also available on Windows and Mac. Just
+Most (all?) programs are
+[FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software). Thus,
+they are also available on Windows and Mac. Just
 google around to find out how to get them for your operating system. 
 
 # Step 0: Install Ubuntu
+This is not meant as a manual to help you install Ubuntu. However,
 You can install Ubuntu on pretty much any computer. I use the 6-month
 rolling releases instead of the LTS. You can get more information
 about how to install Ubuntu from
@@ -29,7 +32,6 @@ it really does all of that. You'll also want
 provides a way for Emacs and R to cooperate. Finally, you'll want git
 for all your version control needs. 
  `sudo apt-get install emacs24 ess git`
-
 
 ## Step 1a: Configure git
 You'll need to tell git your name and email. Run these two commands in
