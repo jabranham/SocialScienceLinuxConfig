@@ -85,8 +85,8 @@ skipping the *doc* and *source*  files. They add a lot to the
 installation and are totally unnecessary if you have internet
 connectivity. 
 
-If you're on a Mac, you can install MaCTeX and Windows users probably
-want MiKTeX. 
+If you're on a Mac, you can install [MaCTeX](https://tug.org/mactex/) and Windows users probably
+want [MiKTeX](http://www.miktex.org/). 
 
 # Step 4: Configure Emacs
 Emacs is infinitely configure-able. You could spend months (years?)
@@ -112,7 +112,8 @@ particularly invaluable:
 * polymode - for .Rnw (knitr + LaTeX) and .Rmd (rmarkdown) files
 * ebib - for .bib file management
 * markdown-mode - for working with markdown files
-* reftex - this comes bundled with emacs in recent versions, but makes
+* reftex - this comes bundled with emacs in recent versions (so no
+  need to install it separately), but makes
   working with .bib files a breeze 
 
 Those are absolute must-haves for doing the sort of work we do. If you
@@ -137,3 +138,11 @@ scrolling
 
 There are tons more packages available, but those should get you
 started. 
+
+# Step 5: Profit!
+You're now set up to use a combination of git, R, markdown, and LaTeX
+in a sane working environment. You didn't have to pay a penny, either!
+These programs (emacs and R in particular) have a bit of a learning
+curve, but don't be dissuaded. There are tons of resources online that
+can help you out. I also write about this kind of stuff on
+[my blog](https://jabranham.github.io). 
