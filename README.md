@@ -46,7 +46,9 @@ shouldn't have to do this again.
 Installing R on an Ubuntu type Linux distribution is easy. You can
 simply follow the steps
 [here](https://cran.r-project.org/bin/linux/ubuntu/README). Be sure to
-read about the secure APT part. 
+read about the secure APT part. Note that you *can* get R from
+Ubuntu's repositories, but you really shouldn't. The version there is
+pretty dated (3.0 as of this writing, and the latest R version is 3.2.2)
 
 ## Step 2a: Configure CRAN mirror
 This step isn't totally necessary, but it may save you some time in
