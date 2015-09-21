@@ -34,6 +34,10 @@ for all your version control needs.
 
     sudo apt-get install emacs24 ess git
 
+If you're doing Bayesian statistics and want to be able to use JAGS,
+you'll also need to get JAGS, which is available and up-to-date on
+Ubuntu's repositories: `sudo apt-get install jags`
+
 ## Step 1a: Configure git
 You'll need to tell git your name and email. Run these two commands in
 the terminal, replacing the "John Doe" information with your name and
