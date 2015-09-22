@@ -34,6 +34,10 @@ for all your version control needs.
 
     sudo apt-get install emacs24 ess git
 
+If you're doing Bayesian statistics and want to be able to use JAGS,
+you'll also need to get JAGS, which is available and up-to-date on
+Ubuntu's repositories: `sudo apt-get install jags`
+
 ## Step 1a: Configure git
 You'll need to tell git your name and email. Run these two commands in
 the terminal, replacing the "John Doe" information with your name and
@@ -49,7 +53,9 @@ shouldn't have to do this again.
 Installing R on an Ubuntu type Linux distribution is easy. You can
 simply follow the steps
 [here](https://cran.r-project.org/bin/linux/ubuntu/README). Be sure to
-read about the secure APT part. 
+read about the secure APT part. Note that you *can* get R from
+Ubuntu's repositories, but you really shouldn't. The version there is
+pretty dated (3.0 as of this writing, and the latest R version is 3.2.2)
 
 ## Step 2a: Configure CRAN mirror
 This step isn't totally necessary, but it may save you some time in
