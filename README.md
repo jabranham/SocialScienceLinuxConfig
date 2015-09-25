@@ -166,16 +166,19 @@ can help you out. I also write about this kind of stuff on
 
 # Step 6: Setting up your Machine to Serve Github Pages
 
-Much thanks to
+If you run your personal website through
+[github pages](https://pages.github.com/), then you probably want the
+stuff in this section. Otherwise, skip it. Much thanks to
 [this website](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)
 for proper instructions. You'll need several of jekyll's dependencies:
 
     sudo apt-get install ruby ruby-dev make gcc nodejs
 
-After that, you can actually install jekyll:
+After that, you can actually install jekyll and `github-pages`:
 
     sudo gem install jekyll --no-rdoc --no-ri
+    sudo gem install github-pages
 
-Make sure it installed correctly:
+Make sure the jekyll installed correctly:
 
     jekyll -v
