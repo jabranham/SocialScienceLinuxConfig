@@ -29,10 +29,11 @@ that it works well on your computer.
 You'll want Emacs (at least 24) for LaTeX, markdown, R, and git. Yes,
 it really does all of that. You'll also want
 [ESS](http://ess.r-project.org/) (Emacs Speaks Statistics), which
-provides a way for Emacs and R to cooperate. Finally, you'll want git
-for all your version control needs. 
+provides a way for Emacs and R to cooperate. Pandoc takes care of
+converting between markdown, latex, pdf, and many other file
+formats. Finally, you'll want git for all your version control needs. 
 
-    sudo apt-get install emacs24 ess git
+    sudo apt-get install emacs24 ess pandoc git
 
 If you're doing Bayesian statistics and want to be able to use JAGS,
 you'll also need to get JAGS, which is available and up-to-date on
