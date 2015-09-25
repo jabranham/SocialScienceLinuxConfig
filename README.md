@@ -163,3 +163,19 @@ These programs (emacs and R in particular) have a bit of a learning
 curve, but don't be dissuaded. There are tons of resources online that
 can help you out. I also write about this kind of stuff on
 [my blog](https://jabranham.github.io). 
+
+# Step 6: Setting up your Machine to Serve Github Pages
+
+Much thanks to
+[this website](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)
+for proper instructions. You'll need several of jekyll's dependencies:
+
+    sudo apt-get install ruby ruby-dev make gcc nodejs
+
+After that, you can actually install jekyll:
+
+    sudo gem install jekyll --no-rdoc --no-ri
+
+Make sure it installed correctly:
+
+    jekyll -v
