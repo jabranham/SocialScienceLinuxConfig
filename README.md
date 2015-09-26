@@ -154,7 +154,26 @@ scrolling
 * flycheck - checks for good style and syntax
 
 There are tons more packages available, but those should get you
-started. 
+started.
+
+## Install pdf-tools
+`pdf-tools` is an emacs package to work with pdf files. The github
+repo is [here](https://github.com/politza/pdf-tools). You'll need to
+follow the installation instructions there. Note that you can't just
+download it from MELPA, since you need to compile and install the C
+part. In short, you can do:
+
+    sudo apt-get install libpng-dev libz-dev 
+    sudo apt-get install libpoppler-glib-dev 
+    sudo apt-get install libpoppler-private-dev
+
+You'll then need to clone the git repo somewhere. Navigate somewhere
+where you want, then do:
+
+    git clone https://github.com/politza/pdf-tools.git
+    cd pdf-tools/
+    make install-server-deps
+    make -s
 
 # Step 5: Profit!
 You're now set up to use a combination of git, R, markdown, and LaTeX
