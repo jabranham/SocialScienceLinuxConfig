@@ -37,7 +37,7 @@ formats. Finally, you'll want git for all your version control needs.
 
 If you're doing Bayesian statistics and want to be able to use JAGS,
 you'll also need to get JAGS, which is available and up-to-date on
-Ubuntu's repositories: `sudo apt-get install jags`
+Ubuntu's repositories: `sudo apt-get install jags`.
 
 ## Step 1a: Configure git
 You'll need to tell git your name and email. Run these two commands in
