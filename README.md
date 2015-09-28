@@ -156,7 +156,7 @@ scrolling
 There are tons more packages available, but those should get you
 started.
 
-## No Okular? Try pdf-tools
+## PDFs in emacs
 `pdf-tools` is an emacs package to work with pdf files. The github
 repo is [here](https://github.com/politza/pdf-tools). You'll need to
 follow the installation instructions there. Note that you can't just
