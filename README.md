@@ -196,7 +196,7 @@ for proper instructions. You'll need several of jekyll's dependencies:
 After that, you can actually install jekyll and `github-pages`:
 
     sudo gem install jekyll --no-rdoc --no-ri
-    sudo gem install github-pages
+    sudo gem install github-pages --no-rdoc --no-ri
 
 Make sure the jekyll installed correctly:
 
