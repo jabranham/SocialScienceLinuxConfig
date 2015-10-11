@@ -78,9 +78,9 @@ R can do a lot out of the box, but it's real strength lies in packages
 that extend it. Here's a quick list of some of the packages that I
 find myself using frequently:
 
-    install.packages("lintr", "ggplot2", "dplyr", "zoo", "haven",
+    install.packages(c("lintr", "ggplot2", "dplyr", "zoo", "haven",
                      "rstan", "rjags", "MCMCpack", "rmarkdown",
-                     "knitr", "reshape2", "servr")
+                     "knitr", "reshape2", "servr"))
 
 # Step 3: Install TeXLive
 This is a bit trickier than R. Ubuntu actually has TeXLive in its
