@@ -58,7 +58,7 @@ read about the secure APT part. Note that you *can* get R from
 Ubuntu's repositories, but you really shouldn't. The version there is
 pretty dated (3.0 as of this writing, and the latest R version is 3.2.2)
 
-## Step 2a: Configure CRAN mirror
+## Step 2a: Configure R
 This step isn't totally necessary, but it may save you some time in
 the future. In your `.Rprofile` file (usually located at ~/), you can
 set the CRAN mirror so that R doesn't ask you. I use RStudio's mirror,
@@ -67,11 +67,26 @@ to use a different mirror, replace `"https://cran.rstudio.com/"` with
 your favorite CRAN mirror. You can find the full list of mirrors
 [here](https://cran.r-project.org/mirrors.html). 
 
+The second part of this configuration file tells R never to save your workspace, 
+and don't even ask about it. If you leave this out, R asks after you `q()` if 
+you want the workspace saved and you have to answer `y` or `n`. This way, you never
+have to deal with it. And you should really be saving things you want *before* trying
+to quit R, anyway! 
+
     local({
       r <- getOption("repos")
           r["CRAN"] <- "https://cran.rstudio.com/"
               options(repos = r)
     })
+    utils::assignInNamespace(
+        "q",
+        function(save = "no", status = 0, runLast = TRUE)
+        {
+        .Internal(quit(save, status, runLast))
+        },
+    "base"
+    )
+
 
 ## Step 2b: Install R packages
 R can do a lot out of the box, but it's real strength lies in packages
