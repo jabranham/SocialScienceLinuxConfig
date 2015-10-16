@@ -1,45 +1,61 @@
-# Configuring your Ubuntu-based PC for Quantitative Social Science Work
-This file will help you get your Ubuntu-based Linux machine up and
+# Configuring your Arch Linux-based PC for Quantitative Social Science Work
+This file will help you get your Arch Linux-based Linux machine up and
 running to do quantitative social science data work. It was inspirited
 by the similarly-titled
 [SocialScienceMacConfig](https://github.com/jwbowers/SocialScienceMacConfig)
 put together by Jake Bowers and Jeff Gill.
-
-Steps should be similar or identical in other Debian-based Linux
-distros. For other Linux systems, you'll probably have access to
-everything I describe here, but may need to change the commands a
-bit.
 
 Most (all?) programs included in this list are
 [FOSS](https://en.wikipedia.org/wiki/Free_and_open-source_software). Thus,
 they are also available on Windows and Mac. Just
 google around to find out how to get them for your operating system. 
 
-# Step 0: Install Ubuntu
-This is not meant as a manual to help you install Ubuntu. However,
-you can install Ubuntu on pretty much any computer. I use the 6-month
-rolling releases instead of the LTS. You can get more information
-about how to install Ubuntu from
-[Ubuntu's website](http://www.ubuntu.com/). A quick Google search will
-also pull up helpful instructions. Be sure to test it out from a
-bootable USB or other disc before installing it. This'll make sure
-that it works well on your computer. 
+# Step 0: Install Arch Linux
+This is not meant as a manual to help you install Arch. However,
+you can install Arch on pretty much any computer. Arch is a rolling
+release distro, so there aren't any "big" updates that you'll have to
+do like with Windows, Mac, or other Linux distros (Ubuntu, for
+example). 
+[Arch's wiki](https://wiki.archlinux.org/index.php/Beginners'_guide)
+has a great article that will get you started with Arch. Don't be
+afraid - the installation process is pretty painless if you're good at
+following directions. Make sure you go to the
+[general recommendations](https://wiki.archlinux.org/index.php/General_recommendations)
+at the end to set up a non-root user account and a working desktop
+environemnt (I use gnome).
 
-# Step 1: Install programs from Ubuntu's repositories
-You'll want Emacs (at least 24) for LaTeX, markdown, R, and git. Yes,
-it really does all of that. You'll also want
-[ESS](http://ess.r-project.org/) (Emacs Speaks Statistics), which
-provides a way for Emacs and R to cooperate. Pandoc takes care of
-converting between markdown, latex, pdf, and many other file
-formats. Finally, you'll want git for all your version control needs. 
+## Step 0a: Update Arch's Mirrorlist
+Arch has a lot of mirrors. You can customize this list, sorting the
+list so that you use the mirrors that are fastest for you with the
+following commands. I've found that this makes a non-trivial
+difference in the speed at which packages download. You'll need to
+change "United States" to whatever
+country you're in.
 
-    sudo apt-get install emacs24 ess pandoc git
+    sudo pacman -S reflector
+    sudo reflector --sort rate --save /etc/pacman.d/mirrorlist -c "United States" -f 5 -l 5
+
+# Step 1: Install programs from Arch's repositories
+You'll want Emacs for LaTeX, markdown, R, and git. Yes,
+it really does all of that. Git is good for all your version control
+needs. R is everything you need for statistical analysis, and texlive
+will provide you with a working TeX distribution. 
+
+    sudo pacman -S emacs git r texlive-most
 
 If you're doing Bayesian statistics and want to be able to use JAGS,
 you'll also need to get JAGS, which is available and up-to-date on
 Ubuntu's repositories: `sudo apt-get install jags`.
 
-## Step 1a: Configure git
+## Step 1a: Install packages from the AUR
+There are a *ton* of useful packages in the Arch User's Repository
+(AUR). You can either download and install them yourself or set up an
+AUR helper like [yaourt](https://wiki.archlinux.org/index.php/Yaourt)
+to manage this for you. You'll want pandoc for sure:
+
+    yaourt -S pandoc-bin
+
+## Step 1b: Configure git
 You'll need to tell git your name and email. Run these two commands in
 the terminal, replacing the "John Doe" information with your name and
 email:
@@ -50,15 +66,7 @@ email:
 The global option will tell git to remember those values, so you
 shouldn't have to do this again. 
 
-# Step 2: Install R
-Installing R on an Ubuntu type Linux distribution is easy. You can
-simply follow the steps
-[here](https://cran.r-project.org/bin/linux/ubuntu/README). Be sure to
-read about the secure APT part. Note that you *can* get R from
-Ubuntu's repositories, but you really shouldn't. The version there is
-pretty dated (3.0 as of this writing, and the latest R version is 3.2.2)
-
-## Step 2a: Configure R
+## Step 1c: Configure R
 This step isn't totally necessary, but it may save you some time in
 the future. In your `.Rprofile` file (usually located at ~/), you can
 set the CRAN mirror so that R doesn't ask you. I use RStudio's mirror,
@@ -88,7 +96,7 @@ to quit R, anyway!
     )
 
 
-## Step 2b: Install R packages
+# Step 2: Install R packages
 R can do a lot out of the box, but it's real strength lies in packages
 that extend it. Here's a quick list of some of the packages that I
 find myself using frequently:
@@ -97,30 +105,7 @@ find myself using frequently:
                      "rstan", "rjags", "MCMCpack", "rmarkdown",
                      "knitr", "reshape2", "servr"))
 
-# Step 3: Install TeXLive
-This is a bit trickier than R. Ubuntu actually has TeXLive in its
-repositories, but the version there tends to be a bit out of date. If
-you want, you can install it via `sudo apt-get texlive-full`. Be
-warned - it's a huge file, so it will take a lot of data (and time) to
-download and install.
-
-I really don't recommend doing that, though. You can install what's
-referred to as "vanilla" TeXLive fairly easily. There's a stackoverflow
-answer [here](http://tex.stackexchange.com/a/95373) that gives
-step-by-step instructions for how to get vanilla TeXLive set up on
-your system. In addition to getting the most up-to-date version of
-LaTeX, the vanilla version will also let you use TeXLive''s package
-management system.
-
-If you usually have regular access to the internet, I'd recommend
-skipping the *doc* and *source*  files. They add a lot to the
-installation and are totally unnecessary if you have internet
-connectivity. 
-
-If you're on a Mac, you can install [MaCTeX](https://tug.org/mactex/) and Windows users probably
-want [MiKTeX](http://www.miktex.org/). 
-
-# Step 4: Configure Emacs
+# Step 3: Configure Emacs
 Emacs is infinitely configure-able. You could spend months (years?)
 getting it *just* right. Feel free to do so. It's probably not worth
 it, though. My advice is just to commit to using emacs, and develop
@@ -171,23 +156,20 @@ scrolling
 There are tons more packages available, but those should get you
 started.
 
-## PDFs in emacs
+## Step 3a: PDF files in emacs
 `pdf-tools` is an emacs package to work with pdf files. The github
 repo is [here](https://github.com/politza/pdf-tools). You'll need to
 follow the installation instructions there. Note that you can't just
 download it from MELPA, since you need to compile and install the C
 part. In short, you can do:
 
-    sudo apt-get install libpng-dev libz-dev 
-    sudo apt-get install libpoppler-glib-dev 
-    sudo apt-get install libpoppler-private-dev
+    sudo pacman poppler poppler-glib
 
 You'll then need to clone the git repo somewhere. Navigate somewhere
 where you want, then do:
 
     git clone https://github.com/politza/pdf-tools.git
     cd pdf-tools/
-    make install-server-deps
     make -s
 
 # Step 5: Profit!
@@ -202,16 +184,12 @@ can help you out. I also write about this kind of stuff on
 
 If you run your personal website through
 [github pages](https://pages.github.com/), then you probably want the
-stuff in this section. Otherwise, skip it. Much thanks to
-[this website](http://michaelchelen.net/81fa/install-jekyll-2-ubuntu-14-04/)
-for proper instructions. You'll need several of jekyll's dependencies:
+stuff in this section. Otherwise, skip it. You'll need several of
+jekyll's dependencies, then jekyll itself (which is included in the
+`github-pages` gem). 
 
-    sudo apt-get install ruby ruby-dev make gcc nodejs
-
-After that, you can actually install jekyll and `github-pages`:
-
-    sudo gem install jekyll --no-rdoc --no-ri
-    sudo gem install github-pages --no-rdoc --no-ri
+    sudo pacman -S ruby
+    gem install github-pages
 
 Make sure the jekyll installed correctly:
 
