@@ -178,7 +178,7 @@ in a sane working environment. You didn't have to pay a penny, either!
 These programs (emacs and R in particular) have a bit of a learning
 curve, but don't be dissuaded. There are tons of resources online that
 can help you out. I also write about this kind of stuff on
-[my blog](https://jabranham.github.io). 
+[my blog](www.jabranham.com). 
 
 # Step 6: Setting up your Machine to Serve Github Pages
 
