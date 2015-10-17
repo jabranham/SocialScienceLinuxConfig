@@ -169,6 +169,7 @@ where you want, then do:
     git clone https://github.com/politza/pdf-tools.git
     cd pdf-tools/
     make -s
+    make install-package
 
 # Step 5: Profit!
 You're now set up to use a combination of git, R, markdown, and LaTeX
