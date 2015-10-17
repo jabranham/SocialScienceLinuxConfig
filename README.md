@@ -39,9 +39,10 @@ country you're in.
 You'll want Emacs for LaTeX, markdown, R, and git. Yes,
 it really does all of that. Git is good for all your version control
 needs. R is everything you need for statistical analysis, and texlive
-will provide you with a working TeX distribution. 
+will provide you with a working TeX distribution. The fortran compiler is
+used by one of lintr's dependencies. 
 
-    sudo pacman -S emacs git r texlive-most
+    sudo pacman -S emacs git r texlive-most gcc-fortran
 
 If you're doing Bayesian statistics and want to be able to use JAGS,
 you'll also need to get JAGS, which is available and up-to-date on
