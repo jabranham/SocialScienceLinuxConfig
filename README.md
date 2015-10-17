@@ -44,17 +44,14 @@ used by one of lintr's dependencies.
 
     sudo pacman -S emacs git r texlive-most gcc-fortran
 
-If you're doing Bayesian statistics and want to be able to use JAGS,
-you'll also need to get JAGS, which is available and up-to-date on
-Ubuntu's repositories: `sudo apt-get install jags`.
-
 ## Step 1a: Install packages from the AUR
 There are a *ton* of useful packages in the Arch User's Repository
 (AUR). You can either download and install them yourself or set up an
 AUR helper like [yaourt](https://wiki.archlinux.org/index.php/Yaourt)
-to manage this for you. You'll want pandoc for sure:
+to manage this for you. You'll want pandoc for sure, and if you're doing 
+Bayesian analysis you may want jags as well:
 
-    yaourt -S pandoc-bin
+    yaourt -S pandoc-bin jags
 
 ## Step 1b: Configure git
 You'll need to tell git your name and email. Run these two commands in
