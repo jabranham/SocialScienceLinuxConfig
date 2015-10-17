@@ -161,9 +161,9 @@ started.
 repo is [here](https://github.com/politza/pdf-tools). You'll need to
 follow the installation instructions there. Note that you can't just
 download it from MELPA, since you need to compile and install the C
-part. In short, you can do:
+part.  You probably already have these installed, but if not do:
 
-    sudo pacman poppler poppler-glib
+    sudo pacman -S poppler poppler-glib
 
 You'll then need to clone the git repo somewhere. Navigate somewhere
 where you want, then do:
