@@ -39,19 +39,20 @@ country you're in.
 You'll want Emacs for LaTeX, markdown, R, and git. Yes,
 it really does all of that. Git is good for all your version control
 needs. R is everything you need for statistical analysis, and texlive
-will provide you with a working TeX distribution. The fortran compiler is
-used by one of lintr's dependencies. 
+will provide you with a working TeX distribution. Pandoc converts between 
+many different document formats (tex, pdf, markdown, Word, etc). The fortran
+compiler is used by one of lintr's dependencies. 
 
-    sudo pacman -S emacs git r texlive-most gcc-fortran
+    sudo pacman -S emacs git r texlive-most pandoc gcc-fortran
 
 ## Step 1a: Install packages from the AUR
 There are a *ton* of useful packages in the Arch User's Repository
 (AUR). You can either download and install them yourself or set up an
 AUR helper like [yaourt](https://wiki.archlinux.org/index.php/Yaourt)
-to manage this for you. You'll want pandoc for sure, and if you're doing 
-Bayesian analysis you may want jags as well:
+to manage this for you. If you're doing Bayesian analysis you want jags. 
+Dropbox is also in there, so install that if you want. 
 
-    yaourt -S pandoc-bin jags
+    yaourt -S jags dropbox
 
 ## Step 1b: Configure git
 You'll need to tell git your name and email. Run these two commands in
