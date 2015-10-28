@@ -41,9 +41,11 @@ it really does all of that. Git is good for all your version control
 needs. R is everything you need for statistical analysis, and texlive
 will provide you with a working TeX distribution. Pandoc converts between 
 many different document formats (tex, pdf, markdown, Word, etc). The fortran
-compiler is used by one of lintr's dependencies. 
+compiler is used by one of lintr's dependencies. Finally, aspell-en gives you 
+dictionary files for spell checking. If you type in languages other than English, 
+you'll need to find the proper dictionaries.
 
-    sudo pacman -S emacs git r texlive-most pandoc gcc-fortran
+    sudo pacman -S emacs git r texlive-most pandoc gcc-fortran aspell-en
 
 ## Step 1a: Install packages from the AUR
 There are a *ton* of useful packages in the Arch User's Repository
