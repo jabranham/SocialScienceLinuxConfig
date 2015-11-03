@@ -190,7 +190,7 @@ stuff in this section. Otherwise, skip it. You'll need several of
 jekyll's dependencies, then jekyll itself (which is included in the
 `github-pages` gem). 
 
-    sudo pacman -S ruby
+    sudo pacman -S ruby nodejs
     gem install github-pages
 
 Make sure the jekyll installed correctly:
